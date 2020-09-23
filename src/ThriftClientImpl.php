@@ -1,8 +1,8 @@
 <?php
 
-namespace Angejia\Thrift;
+namespace Royalcms\Laravel\Thrift;
 
-use Angejia\Thrift\Contracts\ThriftClient;
+use Royalcms\Laravel\Thrift\Contracts\ThriftClient;
 use Illuminate\Contracts\Config\Repository;
 use Thrift\Protocol\TBinaryProtocolAccelerated;
 use Thrift\Protocol\TMultiplexedProtocol;

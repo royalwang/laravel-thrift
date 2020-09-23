@@ -1,6 +1,6 @@
 <?php
 
-namespace Angejia\Thrift\Contracts;
+namespace Royalcms\Laravel\Thrift\Contracts;
 
 interface ThriftClient
 {

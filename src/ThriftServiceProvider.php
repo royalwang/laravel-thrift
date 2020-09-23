@@ -1,6 +1,6 @@
 <?php
 
-namespace Angejia\Thrift;
+namespace Royalcms\Laravel\Thrift;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,8 +20,8 @@ class ThriftServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Angejia\Thrift\Contracts\ThriftServer', 'Angejia\Thrift\ThriftServerImpl');
-        $this->app->singleton('Angejia\Thrift\Contracts\ThriftClient', 'Angejia\Thrift\ThriftClientImpl');
+        $this->app->singleton('Royalcms\Laravel\Thrift\Contracts\ThriftServer', 'Royalcms\Laravel\Thrift\ThriftServerImpl');
+        $this->app->singleton('Royalcms\Laravel\Thrift\Contracts\ThriftClient', 'Royalcms\Laravel\Thrift\ThriftClientImpl');
     }
 
     /**
@@ -31,6 +31,6 @@ class ThriftServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Angejia\Thrift\Contracts\ThriftServer', 'Angejia\Thrift\Contracts\ThriftClient'];
+        return ['Royalcms\Laravel\Thrift\Contracts\ThriftServer', 'Royalcms\Laravel\Thrift\Contracts\ThriftClient'];
     }
 }
