@@ -1,25 +1,35 @@
 {
-    "name": "angejia/thrift-laravel",
+    "name": "royalcms/laravel-thrift",
     "description": "use Thrift in Laravel",
     "keywords": [
         "thrift",
-        "laravel"
+        "laravel",
+        "royalcms"
     ],
     "license": "MIT",
     "require": {
         "php": ">=7.0.0",
-        "illuminate/http": "5.1.*|5.2.*",
-        "illuminate/support": "5.1.*|5.2.*",
-        "symfony/http-foundation": "2.7.*|2.8.*|3.0.*",
-        "angejia/thrift": "^0.9.3.4"
+        "illuminate/http": "6.*|7.*|8.*",
+        "illuminate/support": "6.*|7.*|8.*",
+        "apache/thrift": "^0.9"
     },
-    "require-dev": {
-        "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~4.0"
-    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
-            "Angejia\\Thrift\\": "src/"
+            "Royalcms\\Laravel\\Thrift\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Royalcms\\Laravel\\Thrift\\ThriftServiceProvider"
+            ],
+            "aliases": {
+                "ThriftClient": "Royalcms\\Laravel\\Thrift\\Facades\\ThriftClient"
+            }
         }
     }
 }
