@@ -6,10 +6,10 @@
 
 ## 服务端
 
-1. `composer require angejia/thrift-laravel`
+1. `composer require royalcms/laravel-thrift`
 2. 在配置`app.providers`中添加一行:
     ````
-    \Angejia\Thrift\ThriftServiceProvider::class
+    \Royalcms\Laravel\Thrift\ThriftServiceProvider::class
     ````
 3. 在配置文件`config/thrift.php`中,设置`thrift.providers`:
     ````
@@ -18,16 +18,16 @@
     // class ImageServcie implement \Angejia\ImageServiceIf
     ['Angejia.ImageService', \Angejia\ImageService::class],
     ````
-4. 在`app\Http\Kernel`中添加 Middleware `\Angejia\Thrift\Middleware\ThriftServerMiddleware::class`
+4. 在`app\Http\Kernel`中添加 Middleware `\Royalcms\Laravel\Thrift\Middleware\ThriftServerMiddleware::class`
 
     默认会处理`/rpc`上的请求,如果需要更改此规则,请继承此类并覆盖`process`方法
 
 ## 客户端
 
-1. `composer require angejia/thrift-laravel`
+1. `composer require royalcms/laravel-thrift`
 2. 在配置`app.providers`中添加一行:
     ````
-    \Angejia\Thrift\ThriftServiceProvider::class
+    \Royalcms\Laravel\Thrift\ThriftServiceProvider::class
     ````
 3. 在配置文件`config/thrift.php`中,设置`thrift.depends`:
     ````
@@ -39,8 +39,8 @@
     ````
 4. 使用:
     ````
-    /** @var \Angejia\Thrift\Contracts\ThriftClient $thriftClient */
-    $thriftClient = app(\Angejia\Thrift\Contracts\ThriftClient::class);
+    /** @var \Royalcms\Laravel\Thrift\Contracts\ThriftClient $thriftClient */
+    $thriftClient = app(\Royalcms\Laravel\Thrift\Contracts\ThriftClient::class);
     /** @var \Angejia\ImageServiceIf $imageService */
     $imageService = $thriftClient->with('Angejia.ImageService');
     
